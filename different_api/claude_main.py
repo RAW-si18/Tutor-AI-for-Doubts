@@ -108,77 +108,7 @@ arr = [
         "input_type": "equation", 
         "equations": ["f_s = \mu_s N"], 
         "teacher_response": "Yes. Since the yo-yo is in equilibrium, the normal forces from the floor and wall balance the weight and the tension. Can you write the equilibrium conditions for the forces?" 
-    }, 
-    { 
-        "interaction_number": 6, 
-        "student_input": "Hmm, let me try. For the vertical forces, \( N_{floor} = F_g \). And for the horizontal forces, \( N_{wall} = T \).", 
-        "input_type": "equation", 
-        "equations": ["N_{floor} = F_g", "N_{wall} = T"], 
-        "teacher_response": "You're on the right track. But remember, there are friction forces too. Let's consider the torque next. How do you express torque?" 
-    }, 
-    { 
-        "interaction_number": 7, 
-        "student_input": "Torque is \( \tau = rF \sin(\theta) \).", 
-        "input_type": "equation", 
-        "equations": ["\tau = rF \sin(\theta)"], 
-        "teacher_response": "Correct. Since the yo-yo should not rotate, the net torque must be zero. Can you set up the torque equilibrium equation?" 
-    }, 
-    { 
-        "interaction_number": 8, 
-        "student_input": "The torque due to tension is \( \tau_T = T \cdot r \), and the torques due to friction forces are \( \tau_{f, floor} = f_{s, floor} \cdot R \) and \( \tau_{f, wall} = f_{s, wall} \cdot R \).", 
-        "input_type": "equation", 
-        "equations": ["\tau_T = T \cdot r", "\tau_{f, floor} = f_{s, floor} \cdot R", "\tau_{f, wall} = f_{s, wall} \cdot R"], 
-        "teacher_response": "Remember that friction acts at the points of contact. The friction from the floor prevents slipping horizontally, and from the wall, it prevents slipping vertically. Let's refine the torque equation with correct directions." 
-    }, 
-    { 
-        "interaction_number": 9, 
-        "student_input": "So, \( \tau_T = T \cdot r \). For the friction forces, \( \tau_{f, floor} = \mu_s N_{floor} \cdot R \) and \( \tau_{f, wall} = \mu_s N_{wall} \cdot R \).", 
-        "input_type": "equation", 
-        "equations": ["\tau_T = T \cdot r", "\tau_{f, floor} = \mu_s N_{floor} \cdot R", "\tau_{f, wall} = \mu_s N_{wall} \cdot R"], 
-        "teacher_response": "Right. Since the normal force from the wall is \( N_{wall} = T \), and from the floor \( N_{floor} = F_g \), plug these into the torque equation." 
-    }, 
-    { 
-        "interaction_number": 10, 
-        "student_input": "The torque equilibrium equation is \( T \cdot r = \mu_s F_g \cdot R + \mu_s T \cdot R \).", 
-        "input_type": "equation", 
-        "equations": ["T \cdot r = \mu_s F_g \cdot R + \mu_s T \cdot R"], 
-        "teacher_response": "Excellent. Now substitute \( r = 0.88R \) and simplify the equation." 
-    }, 
-    { 
-        "interaction_number": 11, 
-        "student_input": "\( T \cdot 0.88R = \mu_s F_g \cdot R + \mu_s T \cdot R \).", 
-        "input_type": "equation", 
-        "equations": ["T \cdot 0.88R = \mu_s F_g \cdot R + \mu_s T \cdot R"], 
-        "teacher_response": "Good. Now factor out \( R \) and solve for \( T \)." 
-    }, 
-    { 
-        "interaction_number": 12, 
-        "student_input": "\( T \cdot 0.88 = \mu_s F_g + \mu_s T \).", 
-        "input_type": "equation", 
-        "equations": ["T \cdot 0.88 = \mu_s F_g + \mu_s T"], 
-        "teacher_response": "That's correct. Substitute \( \mu_s = 0.49 \) and \( F_g = 13.72 \, \text{N} \)." 
-    }, 
-    { 
-        "interaction_number": 13, 
-        "student_input": "\( T \cdot 0.88 = 0.49 \times 13.72 + 0.49T \).", 
-        "input_type": "equation", 
-        "equations": ["T \cdot 0.88 = 0.49 \times 13.72 + 0.49T"], 
-        "teacher_response": "Good. Now solve for \( T \)." 
-    }, 
-    { 
-        "interaction_number": 14, 
-        "student_input": "\( T \cdot 0.88 - 0.49T = 6.7228 \). So, \( T (0.88 - 0.49) = 6.7228 \).", 
-        "input_type": "equation", 
-        "equations": ["T \cdot 0.88 - 0.49T = 6.7228", "T (0.88 - 0.49) = 6.7228"], 
-        "teacher_response": "Yes. Continue solving for \( T \)." 
-    }, 
-    { 
-        "interaction_number": 15, 
-        "student_input": "\( T \cdot 0.39 = 6.7228 \). Therefore, \( T = \frac{6.7228}{0.39} \approx 17.24 \, \text{N} \).", 
-        "input_type": "equation", 
-        "equations": ["T \cdot 0.39 = 6.7228", "T = \frac{6.7228}{0.39} \approx 17.24 \, \text{N}"], 
-        "teacher_response": "Excellent! You've found the maximum tension force without causing the yo-yo to rotate." 
-    } 
+    }
 ]
 
 output = claude_chat(prb_st, arr)
